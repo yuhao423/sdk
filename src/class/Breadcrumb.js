@@ -1,7 +1,7 @@
 
 
-import { _support } from '../main'
-import {getTimestamp}  from '../utils/index'
+import { _support } from '../libs/constant.js'
+import {getTimestamp}  from '../utils/help.js'
 class BreadCrumb {
 
     constructor(){
@@ -44,7 +44,7 @@ class BreadCrumb {
 
 
     shift(){
-        this.stack.shift()
+        this.stack.shift() 
     }
 
     clear(){

@@ -1,4 +1,5 @@
-import { isWxEnv } from "./main";
+import { replaceApp } from "./core/replace.js";
+
 
 
 export function init(option= {}){
@@ -8,9 +9,12 @@ export function init(option= {}){
     
     // if(!isWxEnv) return 
 
-
+    console.log('?>???');
+    
+    
     replaceApp()
 
 }
 
+init()
 

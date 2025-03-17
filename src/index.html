@@ -32,35 +32,12 @@
 
     }
 
-    const handlers = {}
-    export function subscribeEvent(handler) {
-        if (!handler || getFlag(handler.type)) return false
-        setFlag(handler.type, true)
-        handlers[handler.type] = handlers[handler.type] || []
-        handlers[handler.type].push(handler.callback)
-        return true
-        }
-
-    export function addReplaceHandler(handler) {
-        if (!subscribeEvent(handler)) return
-        replace(handler.type)
-        }
-
-
     function relpaceApp(){
 
         if(App){
             const originApp = App
 
-            App = function(option){
-                const methods = [
-                    'onLaunch',
-                    'onShow'
-                ]
-                methods.forEach((method)=>{
-
-                })
-            }
+            App = function
         }
     }
 
