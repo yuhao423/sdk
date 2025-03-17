@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<script>
+
+
+    const App = {
+        onLaunch(a){
+            console.log('onLaunched',a);
+            
+        }
+    }
+    
+    function replaceOld(target,name,replacement,isForced){
+        if(!target || target === undefined) return 
+        
+       if(name in target || isForced){
+        let original = target[name]
+        const wrapped = replacement(original)
+        if(isForced || typeof wrapped === 'function'){
+            target[name] = wrapped
+        }
+       }
+
+    }
+
+    const handlers = {}
+    export function subscribeEvent(handler) {
+        if (!handler || getFlag(handler.type)) return false
+        setFlag(handler.type, true)
+        handlers[handler.type] = handlers[handler.type] || []
+        handlers[handler.type].push(handler.callback)
+        return true
+        }
+
+    export function addReplaceHandler(handler) {
+        if (!subscribeEvent(handler)) return
+        replace(handler.type)
+        }
+
+
+    function relpaceApp(){
+
+        if(App){
+            const originApp = App
+
+            App = function(option){
+                const methods = [
+                    'onLaunch',
+                    'onShow'
+                ]
+                methods.forEach((method)=>{
+
+                })
+            }
+        }
+    }
+
+
+    App.onLaunch()
+
+</script>
+</body>
+
+</html>
