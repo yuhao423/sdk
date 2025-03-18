@@ -4,9 +4,7 @@ import { _support } from '../libs/constant.js'
 import {getTimestamp}  from '../utils/help.js'
 class BreadCrumb {
 
-    constructor(){
-
-    }
+    constructor(){}
 
     stack = []
     maxStorageNumber = 10

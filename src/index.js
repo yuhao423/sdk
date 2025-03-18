@@ -16,5 +16,4 @@ export function init(option= {}){
 
 }
 
-init()
 
