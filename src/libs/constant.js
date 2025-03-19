@@ -1,11 +1,5 @@
 import { isWxEnv } from "../utils/help.js"
 
-// export const wx = {
-//     onabort(){
-//         console.log('sb');
-        
-//     }
-// }
 export const getGlobal = ()=>{
     if(isWxEnv) return wx
     return {}
@@ -30,12 +24,3 @@ export const getSet = (wxEvent)=>{
     return replaceFlag[wxEvent] ? true : false
 }
 
-// export let App = {
-//     onLaunch(){
-//         console.log('onLaunch');
-        
-//     }
-// }
-
-//wx App 方法
-export const wxAppMethods = ['onLaunch','onShow','onHide','onError','onPageNotFound','onUnhandledRejection'] 

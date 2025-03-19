@@ -23,7 +23,8 @@ class BreadCrumb {
 
     push(data){
         if(typeof this.beforePushBreadCrumbFunction === 'function'){
-
+            //todo 监听的console得去掉
+            this.beforePushBreadCrumbFunction(data)
         }
 
         this.immediatePush(data)

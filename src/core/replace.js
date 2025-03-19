@@ -1,9 +1,11 @@
 
-import { wxAppMethods } from '../libs/constant.js'
+import { wxAppMethods } from '../libs/wxConstant.js'
 import {replaceOld} from './replaceOld.js'
 import {HandleWxAppEvents} from './handleWxEvents.js'
 import {subscribeEvent} from './subscribeEvent'
-// import {App} from '../libs/constant.js'
+
+
+
 export function addReplaceHandler(handler) {
     if (!subscribeEvent(handler)) return
     replace(handler.type)
@@ -24,6 +26,7 @@ export const replaceApp = ()=>{
                     return function(...args){
                         if(originMethod){
                             originMethod.apply(this,args)
+                            
                         }
                     }
               },true)
