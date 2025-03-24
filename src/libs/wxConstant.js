@@ -1,6 +1,6 @@
 
 
-
+/** 微信全局的事件 */
 export const wxAppMethods = ['onLaunch','onShow','onHide','onError','onPageNotFound','onUnhandledRejection'] 
 
 

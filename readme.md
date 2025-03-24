@@ -18,7 +18,9 @@
     - **maxStorageNumber** 面包屑中**stack**栈最大数量，最小10，最大80 默认`10`
     - **beforePushBreadCrumbFunction** 每次push之前执行的钩子函数 默认 `function`
     
-    - **appOnError** 是否要监控appOnError 默认`true`
-    - **onUnhandledRejection** 是否要监听onUnhandledRejection 默认`true`
-    - **onPageNotFound** 是否要监听onPageNotFound 默认`true`
+    - **wxAppOnError** 是否要监控appOnError 默认`true`
+    - **wxOnUnhandledRejection** 是否要监听onUnhandledRejection 默认`true`
+    - **wxOnPageNotFound** 是否要监听onPageNotFound 默认`true`
+    - **wxRoute**  是否监视微信小程序调转路由 默认`true`
+    更多
     ...

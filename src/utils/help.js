@@ -1,3 +1,6 @@
+import { wxAppEvents } from "../libs/wxConstant"
+import { setFlag } from "../libs/constant"
+
 export const isFunction = (func)=>{
     return Object.prototype.toString.call(func) === '[object function]'
 }
@@ -26,4 +29,15 @@ export const validOption = (source,target,value)=>{
    console.error(target + '期待是',value,'得到是',typeof source);
    return false
     
+}
+
+
+export const wxSetFlag = (option)=>{
+
+    /** 设置标识位，默认是true，表示我要开启该功能 */
+    setFlag(wxAppEvents.onError, !!option.wxAppOnError)
+    setFlag(wxAppEvents.onUnhandledRejection, !!option.wxOnUnhandledRejection)
+    setFlag(wxAppEvents.onPageNotFound, !!option.wxOnPageNotFound)
+    //todo 
+    // setFlag(wxAppEvents.route)
 }
